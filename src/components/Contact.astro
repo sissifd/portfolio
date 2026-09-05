@@ -1,0 +1,14 @@
+---
+import type { SiteContent } from '../content/types';
+
+interface Props {
+  content: SiteContent;
+}
+const { content } = Astro.props;
+---
+<section id="contact">
+  <h2>{content.contact.heading}</h2>
+  <a href={`mailto:${content.contact.email}`} data-testid="contact-email">{content.contact.email}</a>
+  <a href={content.contact.linkedin} data-testid="contact-linkedin">LinkedIn</a>
+  <a href={content.contact.github} data-testid="contact-github">GitHub</a>
+</section>
