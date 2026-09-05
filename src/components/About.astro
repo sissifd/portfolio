@@ -1,0 +1,33 @@
+---
+import type { SiteContent } from '../content/types';
+
+interface Props {
+  content: SiteContent;
+}
+const { content } = Astro.props;
+---
+<section id="about">
+  <h2>{content.about.heading}</h2>
+
+  <h3>{content.about.careerHeading}</h3>
+  <ol data-testid="career-timeline">
+    {content.about.career.map((entry) => (
+      <li>
+        <strong>{entry.role}</strong>
+        <span>{entry.company}</span>
+        <span>{entry.period}</span>
+        <span>{entry.location}</span>
+      </li>
+    ))}
+  </ol>
+
+  <h3>{content.about.educationHeading}</h3>
+  <p>{content.about.education}</p>
+
+  <h3>{content.about.certificationsHeading}</h3>
+  <ul data-testid="certifications">
+    {content.about.certifications.map((cert) => (
+      <li>{cert.name} — {cert.validUntil}</li>
+    ))}
+  </ul>
+</section>
