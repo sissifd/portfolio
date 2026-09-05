@@ -6,6 +6,8 @@ Neuaufbau der Portfolio-Website für Christian Sislak, aktuell unter `christians
 
 Positionierung: Berater/Architekt mit technischem Hintergrund. Die Seite zeigt berufliches Profil und Projekte gleichwertig.
 
+Aktuelle Rolle: Solution Architect bei SAP mit Fokus auf kundeneigene Entwicklungen (Custom Development). Berät Kunden in Workshops, treibt interne Projekte voran (u. a. Weiterentwicklung des eigenen Teams) und hat einen hohen Fokus auf Custom AI Cases. Dieser Fokus (Custom Development + Custom AI) sollte im Hero-Pitch und in der aktuellen Werdegang-Station sichtbar werden.
+
 ## Zielgruppe & Sprache
 
 Deutsch- und englischsprachiges Publikum. Sprachumschalter (DE/EN) über Astro i18n-Routing (`/` für Deutsch, `/en/` für Englisch).
@@ -33,7 +35,7 @@ Single-Page mit vier Sektionen:
 
 | Rolle | Unternehmen | Zeitraum | Ort |
 |---|---|---|---|
-| Cloud Solution Architect | SAP | Juli 2024–Heute | Eschborn (Hybrid) |
+| Cloud Solution Architect — Custom Development & Custom AI | SAP | Juli 2024–Heute | Eschborn (Hybrid) |
 | Projektleiter S/4HANA | DB Systel GmbH | Apr. 2020–Juli 2024 | Frankfurt |
 | Product Owner Team SAP Business Technology Platform | DB Systel GmbH | März 2020–Juli 2024 | Frankfurt |
 | Product Owner Einheit SAP Mobile | DB Systel GmbH | Jan. 2018–März 2020 | Frankfurt/Rhein-Main (Hybrid) |
@@ -48,7 +50,13 @@ Bachelor's Degree, Computer Software and Media Applications — Fachhochschule W
 - SAP Certified Associate – SAP Generative AI Developer (gültig bis Juni 2026)
 - SAP Certified Professional – Solution Architect, SAP BTP (gültig bis Aug. 2026)
 
-Rollenbeschreibungen (Aufgaben/Verantwortlichkeiten je Station) liegen im LinkedIn-Profil vor, wurden aber noch nicht in Kurzform für die Website übernommen — das erfolgt in der Implementierungsphase, ggf. verdichtet auf 1–2 Sätze pro Station.
+**Aktuelle Rolle im Detail (SAP, Solution Architect):**
+- Fokus auf kundeneigene Entwicklungen (Custom Development)
+- Beratung von Kunden in Workshops
+- Treiber interner Projekte, u. a. Weiterentwicklung des eigenen Teams
+- Hoher Fokus auf Custom AI Cases
+
+Rollenbeschreibungen der übrigen Stationen (Aufgaben/Verantwortlichkeiten) liegen im LinkedIn-Profil vor, wurden aber noch nicht in Kurzform für die Website übernommen — das erfolgt in der Implementierungsphase, ggf. verdichtet auf 1–2 Sätze pro Station.
 
 ## Design-Umsetzung
 
