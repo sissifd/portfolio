@@ -1,0 +1,16 @@
+---
+import type { SiteContent } from '../content/types';
+
+interface Props {
+  content: SiteContent;
+}
+const { content } = Astro.props;
+const altLangHref = content.lang === 'de' ? '/en/' : '/';
+const altLangLabel = content.lang === 'de' ? 'English' : 'Deutsch';
+---
+<nav>
+  <a href="#about">{content.nav.about}</a>
+  <a href="#projects">{content.nav.projects}</a>
+  <a href="#contact">{content.nav.contact}</a>
+  <a href={altLangHref} data-testid="lang-switch">{altLangLabel}</a>
+</nav>

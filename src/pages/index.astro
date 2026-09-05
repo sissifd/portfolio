@@ -1,12 +1,8 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import content from '../content/site.de';
 ---
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <title>Christian Sislak — Portfolio</title>
-  </head>
-  <body>
-    <h1>Christian Sislak</h1>
-    <p>Sprache: Deutsch</p>
-  </body>
-</html>
+<BaseLayout content={content}>
+  <Hero content={content} />
+</BaseLayout>

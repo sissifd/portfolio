@@ -1,0 +1,22 @@
+---
+import Nav from '../components/Nav.astro';
+import type { SiteContent } from '../content/types';
+
+interface Props {
+  content: SiteContent;
+}
+const { content } = Astro.props;
+---
+<html lang={content.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{content.hero.name} — {content.hero.role}</title>
+  </head>
+  <body>
+    <Nav content={content} />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

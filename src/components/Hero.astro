@@ -1,0 +1,14 @@
+---
+import type { SiteContent } from '../content/types';
+
+interface Props {
+  content: SiteContent;
+}
+const { content } = Astro.props;
+---
+<section id="hero">
+  <h1>{content.hero.name}</h1>
+  <p class="role">{content.hero.role}</p>
+  <p class="pitch">{content.hero.pitch}</p>
+  <a href="#contact" class="cta">{content.hero.ctaLabel}</a>
+</section>
