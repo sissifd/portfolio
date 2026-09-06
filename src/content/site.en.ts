@@ -81,7 +81,7 @@ const site: SiteContent = {
   contact: {
     heading: 'Contact',
     email: 'chris.sislak@googlemail.com',
-    linkedin: '[PLACEHOLDER]',
+    linkedin: 'https://www.linkedin.com/in/christian-sislak-a6b5315a',
     github: '[PLACEHOLDER]',
   },
 };
