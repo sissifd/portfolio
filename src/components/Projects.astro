@@ -47,6 +47,16 @@ const { content } = Astro.props;
     transform: translateY(-2px);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .project-card {
+      transition: border-color 0.15s ease;
+    }
+
+    .project-card:hover {
+      transform: none;
+    }
+  }
+
   .project-card h3 {
     font-size: var(--step-1);
   }

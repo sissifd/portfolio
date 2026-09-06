@@ -6,7 +6,9 @@
 */
 
 :root {
-  /* Type: system grotesk stack (self-contained, no external font requests) */
+  /* Type: neutral grotesk stack, Inter-led. Inter is chosen deliberately for a
+     calm, standard, Linear-style read (allowed override for a technical portfolio),
+     kept self-contained with no external font requests. */
   --font-sans: "Inter var", "Inter", ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", "Menlo",
@@ -44,7 +46,8 @@
   --surface-line-strong: rgba(255, 255, 255, 0.16);
   --text: #eceef0;
   --text-muted: #a4a9af;
-  --text-faint: #6f757c;
+  /* WCAG AA (>=4.5:1) on --bg #0e0f11 — used for small mono meta labels; 5.65:1 */
+  --text-faint: #868c93;
   --accent: #5b9dd9;
   --accent-strong: #7fb4e6;
   --accent-contrast: #0e0f11;
@@ -60,7 +63,8 @@
     --surface-line-strong: rgba(17, 18, 20, 0.2);
     --text: #17191c;
     --text-muted: #4f555b;
-    --text-faint: #868c93;
+    /* WCAG AA (>=4.5:1) on --bg #f7f7f5 — small mono meta labels; 4.87:1 */
+    --text-faint: #676d74;
     --accent: #1f6fb2;
     --accent-strong: #185a92;
     --accent-contrast: #ffffff;

@@ -58,4 +58,19 @@ const { content } = Astro.props;
     background: var(--accent-strong);
     transform: translateY(-1px);
   }
+
+  .hero__cta:active {
+    transform: translateY(1px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__cta {
+      transition: background 0.15s ease;
+    }
+
+    .hero__cta:hover,
+    .hero__cta:active {
+      transform: none;
+    }
+  }
 </style>
