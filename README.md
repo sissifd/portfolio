@@ -13,6 +13,8 @@ npx playwright test
 
 ## Deployment
 
+Note: the current code lives on the `portfolio-website` branch, not `main`. Either merge it into `main` before importing to Vercel, or set `portfolio-website` as the Production Branch in the Vercel project's Git settings after import.
+
 This project deploys via Vercel's GitHub integration:
 
 1. Go to vercel.com and sign in with GitHub

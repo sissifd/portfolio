@@ -14,9 +14,6 @@
   "dependencies": {
     "astro": "^7.3.1"
   },
-  "allowScripts": {
-    "esbuild": true
-  },
   "devDependencies": {
     "@playwright/test": "^1.63.0"
   }
