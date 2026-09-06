@@ -10,9 +10,9 @@ const site: SiteContent = {
   },
   hero: {
     name: 'Christian Sislak',
-    role: 'Solution Architect — Custom Development & Custom AI',
+    role: 'Solution Architect — AI & Software Development',
     pitch:
-      'I advise customers on custom development for SAP BTP, drive internal team and AI initiatives, and connect deep technical expertise with strategic consulting.',
+      'I advise end-to-end, from requirements to development — with deep AI expertise on the SAP Business AI Platform as well as in custom web applications, websites, and apps.',
     ctaLabel: 'Get in touch',
   },
   about: {
