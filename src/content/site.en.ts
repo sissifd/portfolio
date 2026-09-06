@@ -6,6 +6,7 @@ const site: SiteContent = {
     about: 'About',
     projects: 'Projects',
     contact: 'Contact',
+    skipToContent: 'Skip to content',
   },
   hero: {
     name: 'Christian Sislak',

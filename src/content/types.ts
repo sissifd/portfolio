@@ -22,6 +22,7 @@ export interface SiteContent {
     about: string;
     projects: string;
     contact: string;
+    skipToContent: string;
   };
   hero: {
     name: string;

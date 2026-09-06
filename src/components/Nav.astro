@@ -5,8 +5,10 @@ interface Props {
   content: SiteContent;
 }
 const { content } = Astro.props;
+const altLang = content.lang === 'de' ? 'en' : 'de';
 const altLangHref = content.lang === 'de' ? '/en/' : '/';
 const altLangLabel = content.lang === 'de' ? 'English' : 'Deutsch';
+const altLangAria = content.lang === 'de' ? 'Switch to English' : 'Zur deutschen Version wechseln';
 ---
 <nav class="site-nav">
   <div class="wrap site-nav__inner">
@@ -15,7 +17,14 @@ const altLangLabel = content.lang === 'de' ? 'English' : 'Deutsch';
       <a href="#projects">{content.nav.projects}</a>
       <a href="#contact">{content.nav.contact}</a>
     </div>
-    <a href={altLangHref} data-testid="lang-switch" class="site-nav__lang">{altLangLabel}</a>
+    <a
+      href={altLangHref}
+      data-testid="lang-switch"
+      class="site-nav__lang"
+      lang={altLang}
+      hreflang={altLang}
+      aria-label={altLangAria}
+    >{altLangLabel}</a>
   </div>
 </nav>
 

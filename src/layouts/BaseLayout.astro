@@ -12,11 +12,18 @@ const { content } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0e0f11" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
+    <meta name="description" content={content.hero.pitch} />
     <title>{content.hero.name} — {content.hero.role}</title>
   </head>
   <body>
-    <Nav content={content} />
-    <main>
+    <a href="#main" class="skip-link">{content.nav.skipToContent}</a>
+    <header>
+      <Nav content={content} />
+    </header>
+    <main id="main">
       <slot />
     </main>
   </body>
