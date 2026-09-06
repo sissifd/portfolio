@@ -6,15 +6,64 @@ interface Props {
 }
 const { content } = Astro.props;
 ---
-<section id="projects">
-  <h2>{content.projects.heading}</h2>
-  <div data-testid="project-list">
-    {content.projects.items.map((project) => (
-      <article>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        {project.link && <a href={project.link}>{project.link}</a>}
-      </article>
-    ))}
+<section id="projects" class="section reveal">
+  <div class="wrap">
+    <h2 class="section-title">{content.projects.heading}</h2>
+    <div data-testid="project-list" class="project-list">
+      {content.projects.items.map((project) => (
+        <article class="project-card">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          {project.link && (
+            <a href={project.link} class="project-card__link">{project.link}</a>
+          )}
+        </article>
+      ))}
+    </div>
   </div>
 </section>
+
+<style>
+  .project-list {
+    margin-top: var(--space-l);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: var(--space-m);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: var(--space-l);
+    background: var(--bg-elev);
+    border: var(--border-width) solid var(--surface-line);
+    border-radius: var(--radius);
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--surface-line-strong);
+    transform: translateY(-2px);
+  }
+
+  .project-card h3 {
+    font-size: var(--step-1);
+  }
+
+  .project-card p {
+    color: var(--text-muted);
+  }
+
+  .project-card__link {
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    color: var(--accent-strong);
+    word-break: break-word;
+  }
+
+  .project-card__link:hover {
+    text-decoration: underline;
+  }
+</style>
