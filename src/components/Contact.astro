@@ -5,14 +5,26 @@ interface Props {
   content: SiteContent;
 }
 const { content } = Astro.props;
+
+const PLACEHOLDER = '[PLACEHOLDER]';
+const hasLinkedin = content.contact.linkedin !== PLACEHOLDER;
+const hasGithub = content.contact.github !== PLACEHOLDER;
 ---
 <section id="contact" class="section reveal">
   <div class="wrap contact__inner">
     <h2 class="section-title">{content.contact.heading}</h2>
     <div class="contact__links">
       <a href={`mailto:${content.contact.email}`} data-testid="contact-email" class="contact__link">{content.contact.email}</a>
-      <a href={content.contact.linkedin} data-testid="contact-linkedin" class="contact__link">LinkedIn</a>
-      <a href={content.contact.github} data-testid="contact-github" class="contact__link">GitHub</a>
+      {hasLinkedin ? (
+        <a href={content.contact.linkedin} data-testid="contact-linkedin" class="contact__link">LinkedIn</a>
+      ) : (
+        <span data-testid="contact-linkedin" class="contact__link contact__link--pending" aria-disabled="true">LinkedIn (coming soon)</span>
+      )}
+      {hasGithub ? (
+        <a href={content.contact.github} data-testid="contact-github" class="contact__link">GitHub</a>
+      ) : (
+        <span data-testid="contact-github" class="contact__link contact__link--pending" aria-disabled="true">GitHub (coming soon)</span>
+      )}
     </div>
   </div>
 </section>
@@ -42,5 +54,11 @@ const { content } = Astro.props;
   .contact__link:hover {
     border-color: var(--accent);
     color: var(--accent-strong);
+  }
+
+  .contact__link--pending {
+    color: var(--text-muted);
+    opacity: 0.5;
+    cursor: default;
   }
 </style>
