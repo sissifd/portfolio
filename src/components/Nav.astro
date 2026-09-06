@@ -8,9 +8,63 @@ const { content } = Astro.props;
 const altLangHref = content.lang === 'de' ? '/en/' : '/';
 const altLangLabel = content.lang === 'de' ? 'English' : 'Deutsch';
 ---
-<nav>
-  <a href="#about">{content.nav.about}</a>
-  <a href="#projects">{content.nav.projects}</a>
-  <a href="#contact">{content.nav.contact}</a>
-  <a href={altLangHref} data-testid="lang-switch">{altLangLabel}</a>
+<nav class="site-nav">
+  <div class="wrap site-nav__inner">
+    <div class="site-nav__links">
+      <a href="#about">{content.nav.about}</a>
+      <a href="#projects">{content.nav.projects}</a>
+      <a href="#contact">{content.nav.contact}</a>
+    </div>
+    <a href={altLangHref} data-testid="lang-switch" class="site-nav__lang">{altLangLabel}</a>
+  </div>
 </nav>
+
+<style>
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--border-width) solid var(--surface-line);
+  }
+
+  .site-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-m);
+    padding-block: var(--space-s);
+  }
+
+  .site-nav__links {
+    display: flex;
+    gap: var(--space-l);
+  }
+
+  .site-nav__links a {
+    font-size: var(--step--1);
+    color: var(--text-muted);
+    transition: color 0.15s ease;
+  }
+
+  .site-nav__links a:hover {
+    color: var(--text);
+  }
+
+  .site-nav__lang {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+    border: var(--border-width) solid var(--surface-line);
+    border-radius: var(--radius-pill);
+    padding: 0.35em 0.9em;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .site-nav__lang:hover {
+    color: var(--text);
+    border-color: var(--surface-line-strong);
+  }
+</style>
